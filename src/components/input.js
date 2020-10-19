@@ -9,44 +9,46 @@ const Input = (props) => (
             {...props}
             placeholder={''}
             value={props.value}
-            placeholderTextColor='rgba(45,45,45,0.5)'
+            placeholderTextColor='black'
             underlineColorAndroid='transparent'
             style={[props.title ?
                 [styles.textinput1, props.error ? { borderBottomColor: '#e80606' } : '', props.textColor ? { color: props.textColor } : ''] :
                 [styles.textinput, props.error ? { borderColor: '#e80606' } : ''],!props.multiline&&{height: 45}, props.multiline&&{paddingBottom: 15}]}
             onChangeText={props.onChangeText}            
         />
-        {props.value === '' && <Text style={[styles.placeholder, props.title ? { top: 66 } : '']}>{props.placeholder}{!props.norequire&&<Text style={{ color: '#e80606' }}>*</Text>}</Text>}
+        {props.value === '' && <Text style={[styles.placeholder, props.title ? { top: 66 } : '']}>{props.placeholder}{!props.norequire&&<Text style={{ color: '#e80606' }}></Text>}</Text>}
     </View>
 )
 
 const styles = StyleSheet.create({
     container: { 
-        alignItems: 'center', 
         zIndex: 10,
-        width: width - 88,         
+        width: width - 50,
+       
     },
     container1: { 
         alignItems: 'center', 
         zIndex: 10,
-        width: width - 88, 
+        width: width -20, 
         borderBottomColor: '#dfdfdf',
         borderBottomWidth: 2,
+        
     },
     textinput: {
         fontSize: 16,
         fontWeight: '600',
         color: '#2d2d2d',
-        borderRadius: 24,
+        borderRadius: 12,
         height: 45,        
         width: '100%',
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 10,
-        borderColor: '#dfdfdf',
+        borderColor: '#EDF3F6',
         borderWidth: 2,
-        zIndex: 10
+        zIndex: 10,
+       
     },
     textinput1: {
         fontSize: 16,
@@ -57,20 +59,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 10,
-        paddingBottom: 5
+        paddingBottom: 5,
+        
+       
     },
     placeholder: {
         fontSize: 16,
-        color: 'rgba(45,45,45,0.5)',
+        color: 'black',
         position: 'absolute',
         top: 22,
-        zIndex: 9
+        left: 20,
+        zIndex: 9,
+        
     },
     title: {
         fontSize: 14,
         lineHeight: 24,
         letterSpacing: 0.24,
-        color: '#bfbfbf'
+        color: '#bfbfbf',
+        
     },
     title1: {
         fontSize: 18,

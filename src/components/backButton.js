@@ -1,10 +1,10 @@
 import React from 'react';
-import { Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Images from '../config/images';
 
 const Back = (props) => (
-    <TouchableOpacity style={innerStyle.backButton} onPress={props.onPress}>
-        <Image source={Images.back_red} style={innerStyle.backIcon} />
+    <TouchableOpacity  onPress={props.onPress}>
+        <Text style={{color:"blue"}}>Back</Text>
     </TouchableOpacity>
 );
 

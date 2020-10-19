@@ -16,31 +16,45 @@ export default StyleSheet.create({
     },
     cut: {
         width: width,
-        height: width*0.4,
-        marginTop: height * 0.1,
+        height: width*0.8,
+        marginTop: height * 0.05,
         resizeMode: 'center'
     },
     bottomView: {
         position: 'absolute',
-        bottom: 42,
+        bottom: 82,
         zIndex: 10,
         alignItems: 'center'
+    },
+
+    homepage:{
+        width: width* 0.8,
+        textAlign: "center",
+        lineHeight:40,
+        fontSize: 30,
+        marginBottom:20,
+        fontWeight:"bold"
     },
     title: {
         fontSize: 16,
         lineHeight: 24,
-        color: '#fff',
-        marginTop: 15
+        color: '#B5BAC9',
+        marginTop: 10,
+        position:'absolute',
+        bottom: 20
     },
     button: {
-        backgroundColor: 'white'
+        backgroundColor: '#216EFB',
+        height:50
     },
     buttonTitle: {
-        color: '#e80606',
-        letterSpacing: 1.3
+        color: 'white',
+        letterSpacing: 1.3,
+      
     },
     borderButton: {
-        width: width - 88
+        width: width - 88,
+        height: 50
     },
     borderBT: {
         letterSpacing: 1.3

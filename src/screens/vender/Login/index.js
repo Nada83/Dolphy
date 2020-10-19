@@ -4,6 +4,7 @@ import Images from '../../../config/images';
 import Input from '../../../components/input';
 import BorderButton from '../../../components/borderButton';
 import Button from '../../../components/Button';
+import Back from '../../../components/backButton';
 import ToggleButton from '../../../components/toggleButton';
 import DismissKeyboard from '../../../components/dismissKeyboard';
 import {Login} from '../../../reducers/session/action';
@@ -20,6 +21,7 @@ function LoginPage(props) {
     const [type, setType] = React.useState('customer')
     const _handleEmail = email => setEmail(email);
     const _handlePassword = number => setPassword(number);
+    const goBack= ()=>navigation.goBack();
     const next = async () => {
         // if (email === '' || password === '') {
         //     setError(true);
@@ -42,10 +44,14 @@ function LoginPage(props) {
 
         <DismissKeyboard>
             <SafeAreaView style={styles.container}>
-                <ToggleButton style={{ marginTop: 50, marginBottom: 40 }} leftPress={selectedCustomer} rightPress={selectedVendor} />
-                <Text style={styles.title}>Sign In</Text>
+                <View style={styles.headersection}>
+                    <Back onPress={goBack}/>
+                    <Text style={styles.title}>Sign In</Text>
+                </View>
+                
+                <ToggleButton style={{ marginTop: 40, marginBottom:10 }} leftPress={selectedCustomer} rightPress={selectedVendor} />
                 <Input
-                    placeholder='Enter email address'
+                    placeholder='Type your e-mail here...'
                     onChangeText={_handleEmail}
                     value={email}
                     keyboardType='email-address'
@@ -55,7 +61,7 @@ function LoginPage(props) {
                 />
 
                 <Input
-                    placeholder='Type password'
+                    placeholder='password...'
                     onChangeText={_handlePassword}
                     value={password}
                     secureTextEntry
@@ -64,14 +70,8 @@ function LoginPage(props) {
                     onSubmitEditing={() => Keyboard.dismiss()}
                     error={error && password === ''}
                 />
+                <Button title='Sign in to your account' onPress={next} style={styles.loginButton} />
                 <Text style={styles.forgotPassword}>Forgot password?</Text>
-                <Button title='LOGIN' onPress={next} style={styles.loginButton} />
-                <Text style={[styles.smallTitle, { color: '#bfbfbf', marginTop: 14 }]}>Alternatively sign in with</Text>
-                <View style={styles.loginButtonView}>
-                    <Text style={styles.loginTitle}>Don't have an account?</Text>
-                    <BorderButton title='REGISTER' onPress={register} />
-                </View>
-                <Image source={Images.bottom_image1} style={styles.BottomImage} />
                 <Loader visible={load}/>
             </SafeAreaView>
         </DismissKeyboard>

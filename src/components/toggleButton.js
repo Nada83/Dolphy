@@ -21,7 +21,7 @@ export default function ToggleButton(props) {
         setCustomerColor('#dfdfdf');
         setVendorColor('#fff');
         Animated.timing(left, {
-            toValue: (width - 114) / 2,
+            toValue: (width - 64) / 2,
             duration: 400,
             easing: Easing.inOut(Easing.quad),
             useNativeDriver: false
@@ -43,7 +43,7 @@ export default function ToggleButton(props) {
                     <Text
                         style={[styles.title, { color: customerColor }]}
                     >
-                        CUSTOMER
+                        I'm vender
                     </Text>
                 </View>
             </TouchableOpacity>
@@ -58,7 +58,7 @@ export default function ToggleButton(props) {
                     <Text
                         style={[styles.title, { color: vendorColor }]}
                     >
-                        COMPANY
+                        I'm client
                 </Text>
                 </View>
             </TouchableOpacity>
@@ -85,34 +85,34 @@ const styles = StyleSheet.create({
     container: {
         height: 45,
         backgroundColor: "transparent",
-        borderRadius: 24,
+        borderRadius: 12,
         marginVertical: 24.5,
         flexDirection: "row",
         alignItems: "center",
         borderColor: '#dfdfdf',
-        borderWidth: 2
+        borderWidth: 2,
+        backgroundColor:"#EDF3F6"
     },
     customer: {
         borderRadius: 24,
         justifyContent: "center",
         alignItems: "center",
         height: 45,
-        width: (width - 114) / 2
+        width: (width - 50) / 2
     },
     title: {
-        fontSize: 12,
+        fontSize: 16,
         fontWeight: "bold",
         backgroundColor: "transparent",
-        letterSpacing: 1.92
 
     },
     animateView: {
-        borderRadius: 24,
+        borderRadius: 10,
         justifyContent: "center",
         alignItems: "center",
         height: 45,
-        width: (width - 114) / 2,
-        backgroundColor: "#e80606",
+        width: (width - 30) / 2,
+        backgroundColor: "#216EFB",
         position: "absolute"
     }
 })

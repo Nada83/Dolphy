@@ -32,19 +32,30 @@ export default StyleSheet.create({
         
     },
     loginButton: {
-        backgroundColor: '#e80606'
+        backgroundColor: '#D3E2FE',
+        height: 50,
+        width: width-50
     },
+
+    headersection:{
+        flexDirection: 'row',
+        width:width *0.8,
+        alignItems:'flex-end',
+        marginTop: 50
+    },
+
     forgotPassword: {
         fontSize: 15,
         fontWeight: '400',
         lineHeight: 24,
-        color: '#e80606',
+        color: '#B5BAC9',
         marginTop: 18,
         marginBottom: 4
     },
     title: {
-        color: '#e80606',
-        fontSize: 23,
+        color: 'black',
+        fontSize: 16,
+        marginLeft: width*0.24,
         fontWeight: 'bold'
     },
     smallTitle: {

@@ -12,12 +12,13 @@ function Onboard({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>            
             <Image source={Images.CUT} style={styles.cut}/>
+            
             <View style={styles.bottomView}>
+                <Text style={styles.homepage}>The easiest way to communicate with your clients.</Text>
                 <Button title='SIGN IN' style={styles.button} titleStyle={styles.buttonTitle} onPress={gotoLogin}/>
-                <BorderButton title='REGISTER' style={styles.borderButton} titleStyle={styles.borderBT} onPress={register}/>
-                <Text style={styles.title}>Alternatively sign in with</Text>
+                <BorderButton title='Create an account' style={styles.borderButton} titleStyle={styles.borderBT} onPress={register}/>
             </View>
-            <Image source={Images.bottom_image} style={styles.BottomImage} />
+            <Text style={styles.title}>@Dolphy 2020.All rights reserved</Text>
         </SafeAreaView>
     )
 }
