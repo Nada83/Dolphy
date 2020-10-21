@@ -17,7 +17,7 @@ function CreateAccount({ navigation }) {
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [phoneNumber, setPhoneNumber] = React.useState('');
-    const [type, setType] = React.useState('vendor');
+    const [type, setType] = React.useState('client');
     const selectedclient = () => setType('client');
     const selectedVendor = () => setType('vendor');
     const _handleName = name => setName(name);
@@ -32,7 +32,7 @@ function CreateAccount({ navigation }) {
         let info = {
             username: name, email,contact_number: phoneNumber
         }
-        if (type === 'vendor') {
+        if (type === 'client') {
             navigation.navigate('Vendertwosignup', { info });
         } else {
             navigation.navigate('Clienttwosignup', { info })
