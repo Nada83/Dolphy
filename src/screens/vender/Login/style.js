@@ -31,6 +31,12 @@ export default StyleSheet.create({
         bottom: 30
         
     },
+
+    activelogin:{
+        backgroundColor: '#216EFB',
+        height: 50,
+        width: width-50
+    },
     loginButton: {
         backgroundColor: '#D3E2FE',
         height: 50,
@@ -56,7 +62,8 @@ export default StyleSheet.create({
         color: 'black',
         fontSize: 16,
         marginLeft: width*0.24,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily:"Product Sans"
     },
     smallTitle: {
         color: '#2d2d2d',

@@ -5,10 +5,10 @@ const { width } = Dimensions.get('window')
 export default function ToggleButton(props) {
     const [left, setLeft] = React.useState(new Animated.Value(0));
     const [customerColor, setCustomerColor] = React.useState('white');
-    const [vendorColor, setVendorColor] = React.useState('#dfdfdf');
+    const [vendorColor, setVendorColor] = React.useState('#22325D');
     const pressLeft = () => {
         setCustomerColor('white');
-        setVendorColor('#dfdfdf');
+        setVendorColor('#22325D');
         Animated.timing(left, {
             toValue: 0,
             duration: 400,
@@ -18,7 +18,7 @@ export default function ToggleButton(props) {
         props.leftPress()
     }
     const pressRight = () => {
-        setCustomerColor('#dfdfdf');
+        setCustomerColor('#22325D');
         setVendorColor('#fff');
         Animated.timing(left, {
             toValue: (width - 64) / 2,
@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        fontWeight: "bold",
         backgroundColor: "transparent",
+        fontFamily:"Product Sans"
 
     },
     animateView: {

@@ -14,13 +14,25 @@ export default StyleSheet.create({
         zIndex: 1,
         resizeMode: 'cover'
     },
+    headersection:{
+        flexDirection: 'row',
+        width:width *0.8,
+        alignItems:'flex-end',
+        marginTop: 50
+    },
+
     title: {
-        fontSize: 23,
-        color: '#e80606',
+        fontSize: 16,
         fontWeight: 'bold',
-        marginTop: height > 700 ? 50 : 10,
+        marginLeft: width*0.14,
         lineHeight: 24,
         letterSpacing: 0.24
+    },
+
+    continue:{
+        width:width*0.85,
+        position:'absolute',
+        bottom:10
     },
     smallTitle: {
         fontSize: 16,

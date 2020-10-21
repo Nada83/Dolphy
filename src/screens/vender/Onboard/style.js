@@ -22,7 +22,7 @@ export default StyleSheet.create({
     },
     bottomView: {
         position: 'absolute',
-        bottom: 82,
+        bottom: 100,
         zIndex: 10,
         alignItems: 'center'
     },
@@ -33,7 +33,8 @@ export default StyleSheet.create({
         lineHeight:40,
         fontSize: 30,
         marginBottom:20,
-        fontWeight:"bold"
+        fontWeight:"bold",
+        fontFamily:"product Sans"
     },
     title: {
         fontSize: 16,
@@ -41,23 +42,27 @@ export default StyleSheet.create({
         color: '#B5BAC9',
         marginTop: 10,
         position:'absolute',
-        bottom: 20
+        bottom: 30
     },
     button: {
         backgroundColor: '#216EFB',
-        height:50
+        height:55,
+        marginTop:30
     },
     buttonTitle: {
         color: 'white',
         letterSpacing: 1.3,
+        fontWeight:"bold",
+        fontSize: 16
       
     },
     borderButton: {
         width: width - 88,
-        height: 50
+        height: 55
     },
     borderBT: {
-        letterSpacing: 1.3
+        letterSpacing: 1.3,
+        fontSize: 16
     },
     socialButton: {
         flexDirection: 'row',

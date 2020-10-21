@@ -49,7 +49,7 @@ function LoginPage(props) {
                     <Text style={styles.title}>Sign In</Text>
                 </View>
                 
-                <ToggleButton style={{ marginTop: 40, marginBottom:10 }} leftPress={selectedCustomer} rightPress={selectedVendor} />
+                <ToggleButton style={{ marginTop: 50, marginBottom:10 }} leftPress={selectedCustomer} rightPress={selectedVendor} />
                 <Input
                     placeholder='Type your e-mail here...'
                     onChangeText={_handleEmail}
@@ -70,7 +70,7 @@ function LoginPage(props) {
                     onSubmitEditing={() => Keyboard.dismiss()}
                     error={error && password === ''}
                 />
-                <Button title='Sign in to your account' onPress={next} style={styles.loginButton} />
+                <Button title='Sign in to your account' onPress={next}  style={[!email || !password ?styles.loginButton : styles.activelogin]} />
                 <Text style={styles.forgotPassword}>Forgot password?</Text>
                 <Loader visible={load}/>
             </SafeAreaView>

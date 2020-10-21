@@ -15,7 +15,7 @@ const Button = ({style, onPress, title, titleStyle, disable}) => (
 const styles = StyleSheet.create({
     container: {
         width: width - 88,
-        height: 45,
+        height: 50,
         borderRadius: 12,
         backgroundColor: '#dfdfdf',
         justifyContent: 'center',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         zIndex: 10
     },
     title: {
-        fontSize: 14,
+        fontSize: 16,
         fontWeight: '600',
         color: 'white',
         letterSpacing: 1.3
