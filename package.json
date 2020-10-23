@@ -18,6 +18,7 @@
     "@react-navigation/stack": "^5.5.1",
     "lodash": "^4.17.15",
     "moment": "^2.26.0",
+    "native-base": "^2.13.14",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-calendars": "^1.299.0",

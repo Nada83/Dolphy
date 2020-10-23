@@ -42,8 +42,6 @@ function Vendertwosignup({ navigation }) {
                             placeholder={'Registration number'}
                             onChangeText={_handleNumber}
                             value={number}
-                            keyboardType='number'
-                            textContentType='number'
                             autoCapitalize='none'
                             error={error&&number===''}
                         />  
@@ -51,8 +49,6 @@ function Vendertwosignup({ navigation }) {
                             placeholder={'Bank_ID...'}
                             onChangeText={_handleBackId}
                             value={back_id}
-                            keyboardType='Bank_ID'
-                            textContentType='Bank_ID'
                             autoCapitalize='none'
                             error={error&&back_id===''}
                         />

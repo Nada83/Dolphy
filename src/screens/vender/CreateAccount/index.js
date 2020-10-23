@@ -56,8 +56,6 @@ function CreateAccount({ navigation }) {
                             placeholder={type === 'client' ? 'Company name...' : 'Your name...'}
                             onChangeText={_handleName}
                             value={name}
-                            keyboardType='name'
-                            textContentType='name'
                             autoCapitalize='none'
                             error={error&&name===''}
                         />  
@@ -65,8 +63,6 @@ function CreateAccount({ navigation }) {
                             placeholder={'E-mail...'}
                             onChangeText={_handleEmail}
                             value={email}
-                            keyboardType='email-address'
-                            textContentType='emailAddress'
                             autoCapitalize='none'
                             error={error&&email===''}
                         />
@@ -75,7 +71,6 @@ function CreateAccount({ navigation }) {
                             onChangeText={_handlePhoneNumber}
                             value={phoneNumber}
                             secureTextEntry
-                            textContentType='phoneNumber'
                             blurOnSubmit={false}
                             onSubmitEditing={() => Keyboard.dismiss()}
                             error={error&&phoneNumber===''}

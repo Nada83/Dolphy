@@ -23,7 +23,7 @@ function Clienttwosignup({ navigation }) {
         let info = {
             password: password
         }
-            navigation.navigate('Vendertwosignup', { info });
+            navigation.navigate('Dashboard', { info });
     }
     if (password !== '' && comfirmpass !== '') {
         allow = true;
@@ -42,8 +42,6 @@ function Clienttwosignup({ navigation }) {
                             placeholder={'Password...'}
                             onChangeText={_handlePassword}
                             value={password}
-                            keyboardType='password'
-                            textContentType='password'
                             autoCapitalize='none'
                             error={error&&password===''}
                         />  
@@ -51,8 +49,6 @@ function Clienttwosignup({ navigation }) {
                             placeholder={'Confirm password...'}
                             onChangeText={_handleConfrimpass}
                             value={comfirmpass}
-                            keyboardType='Confrimpass'
-                            textContentType='Confrimpass'
                             autoCapitalize='none'
                             error={error&&comfirmpass===''}
                         />

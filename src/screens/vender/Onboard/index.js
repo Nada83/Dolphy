@@ -7,7 +7,7 @@ import styles from './style';
 const { width } = Dimensions.get('window')
 
 function Onboard({ navigation }) {
-    const gotoLogin = () => navigation.navigate('Login')
+    const gotoLogin = () => navigation.navigate('Dashboard')
     const register = () => navigation.navigate('CreateAccount')
     return (
         <SafeAreaView style={styles.container}>            
