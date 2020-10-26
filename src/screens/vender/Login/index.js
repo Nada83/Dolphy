@@ -23,18 +23,11 @@ function LoginPage(props) {
     const _handlePassword = number => setPassword(number);
     const goBack= ()=>navigation.goBack();
     const next = async () => {
-        // if (email === '' || password === '') {
-        //     setError(true);
-        //     return;
-        // }
-        // setLoad(true);
-        // await login({ email, password }, type); 
-        // setLoad(false);
-        // return
+       //checking login type
         if (type === 'customer') {
           
         } else {
-            
+            navigation.navigate('Dashboard');
         }
     }
     const register = () => navigation.navigate('CreateAccount');

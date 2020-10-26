@@ -1,3 +1,5 @@
+//Landing page
+
 import React from 'react';
 import { View, Text, SafeAreaView, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import Images from '../../../config/images';
@@ -7,7 +9,7 @@ import styles from './style';
 const { width } = Dimensions.get('window')
 
 function Onboard({ navigation }) {
-    const gotoLogin = () => navigation.navigate('Dashboard')
+    const gotoLogin = () => navigation.navigate('Login')
     const register = () => navigation.navigate('CreateAccount')
     return (
         <SafeAreaView style={styles.container}>            

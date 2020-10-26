@@ -24,6 +24,7 @@ function CreateAccount({ navigation }) {
     const _handleEmail = email => setEmail(email);
     const _handlePhoneNumber = number => setPhoneNumber(number);
     const goBack= ()=>navigation.goBack();
+    //validation all input value and move password page.
     const next = () => {
         if(name===''||email===''||phoneNumber===''){
             setError(true);
